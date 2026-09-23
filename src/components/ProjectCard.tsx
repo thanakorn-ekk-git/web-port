@@ -1,0 +1,4 @@
+import Link from "next/link";
+import type { Project } from "@/types/project";
+import { Artwork } from "./Artwork";
+export function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) { return <Link href={`/projects/${project.slug}`} className={`project-card card-${(index % 3) + 1}`}><div className="thumb-frame"><Artwork src={project.thumbnail} alt={`${project.title} artwork placeholder`} fit={project.thumbnailFit} />{project.logo && <img className="thumb-logo" src={project.logo} alt={`${project.title} logo`} />}</div><div className="project-card-copy"><p className="eyebrow">{project.category.join(" / ")}</p><h3>{project.title}</h3><p>{project.shortDescription}</p><div className="chips">{project.software.slice(0, 3).map((item) => <span key={item}>{item}</span>)}</div></div><span className="arrow">↗</span></Link>; }

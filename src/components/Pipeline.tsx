@@ -1,0 +1,2 @@
+const stages = ["Concept", "Blender", "Modeling", "Sculpting", "Retopology", "UV", "Texturing", "Rigging", "Animation", "Unreal / Unity"];
+export function Pipeline({ compact = false }: { compact?: boolean }) { return <div className={`pipeline ${compact ? "compact" : ""}`}>{stages.map((stage, index) => <div className="pipeline-stage" key={stage}><span>{String(index + 1).padStart(2, "0")}</span><strong>{stage}</strong>{index < stages.length - 1 && <i aria-hidden="true">↓</i>}</div>)}</div>; }
