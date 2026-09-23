@@ -70,10 +70,11 @@ export const projects: Project[] = ([
     },
     video: "/videos/swordbound_dev/trailer.mp4",
   },
-  {    title: "Hector: Swordbound Character Game Asset ", featured: true, order: 3, slug: "hector-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
+  {    title: "Hector - Swordbound Character Game Asset ", featured: true, order: 3, slug: "hector-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
     shortDescription: "A game-ready character built from sculpt to animation-ready rig.",
     description: "A stylized male character. The intended focus is a clear, production-minded journey from Blender sculpting through efficient topology, materials, rigging, animations, and engine delivery.",
     thumbnail: "/images/hector/hero.png", heroImage: "/images/hector/hero.png",
+    logo: "/images/swordbound_dev/logo.png",
     gallery: [
       { src: "/images/hector/hero.png", alt: "Hector hero render", aspect: "wide" },
       { src: "/images/hector/wireframe.png", alt: "Hector wireframe", aspect: "square" },
@@ -89,10 +90,11 @@ export const projects: Project[] = ([
     video: "/videos/hector/walk_run.mp4",
     model: { src: "/models/hector/shaded.glb", wireframeSrc: "/models/hector/wired.glb", poster: "/images/hector/hero.png", alt: "Hector 3D model" }
   },
-  {    title: "Egertun, the Skullbourne: Swordbound Character Game Asset ", featured: true, order: 4, slug: "egertun-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
+  {    title: "Egertun, the Skullbourne - Swordbound Character Game Asset ", featured: true, order: 4, slug: "egertun-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
     shortDescription: "A game-ready character built from sculpt to animation-ready rig.",
     description: "A stylized evil boss character. The intended focus is a clear, production-minded journey from Blender sculpting through efficient topology, materials, rigging, animations, and engine delivery.",
     thumbnail: "/images/egertun/hero.png", heroImage: "/images/egertun/hero.png",
+    logo: "/images/swordbound_dev/logo.png",
     gallery: [
       { src: "/images/egertun/hero.png", alt: "Egertun hero render", aspect: "wide" },
       { src: "/images/egertun/diffuse.png", alt: "Egertun diffuse texture", aspect: "square" },
@@ -108,10 +110,11 @@ export const projects: Project[] = ([
     technical: { "Asset status": "Finished", "Workflow": ["High poly to low poly", "UV unwrapping", "Normal texture from high poly", "Unreal Engine integration"] },
     model: { src: "/models/egertun/shaded.glb", wireframeSrc: "/models/egertun/wired.glb", poster: "/images/egertun/hero.png", alt: "Egertun 3D model" }
   },
-  {    title: "Alementus Sword", slug: "alementus-sword-swordbound", featured: true, order: 5, category: ["Swordbound", "Prop", "Unreal Engine"], year: "2025-2026", 
+  {    title: "Alementus Sword - Swordbound Game Asset", slug: "alementus-sword-swordbound", featured: true, order: 5, category: ["Swordbound", "Prop", "Unreal Engine"], year: "2025-2026", 
     shortDescription: "A stylized style sword prop designed to be main weapon of protagonist.", 
     description: "A stylized style prop. focused on creating an ancient sword that have clear visual as a elements power posess weapon, capability of swith between elements.", 
     thumbnail: "/images/alementus_sword/hero.png", heroImage: "/images/alementus_sword/hero.png",
+    logo: "/images/swordbound_dev/logo.png",
     gallery: [
       { src: "/images/alementus_sword/hero.png", alt: "Alementus Sword hero render", aspect: "wide" },
       { src: "/images/alementus_sword/crystals.png", alt: "Alementus Sword element crystals", aspect: "square" },
@@ -126,8 +129,7 @@ export const projects: Project[] = ([
     technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "UV unwrapping", "Stylized materials", "Unreal Engine integration"] },
     model: { src: "/models/alementus_sword/shaded.glb", wireframeSrc: "/models/alementus_sword/wired.glb", poster: "/images/alementus_sword/hero.png", alt: "Alamentus Sword 3D model" }
   },
-  {
-    title: "Spartan & Minotaur: A Short Animation", slug: "spartan-n-minotaur-animation", featured: true, order: 5, category: ["Character", "Animation", "Rigging", "Prop"], year: "2024", 
+  {    title: "Spartan & Minotaur - A Short Animation", slug: "spartan-n-minotaur-animation", featured: true, order: 6, category: ["Character", "Animation", "Rigging", "Prop"], year: "2024", 
     shortDescription: "Combat motion designed from great spartan warrior with a relative creature.", 
     description: "A action short animation, presenting combat sequence of spartan warrior fighting a minotaur, the famous fantasy creature from Greek mythology. This animation showing workflow from concept to animation.", 
     thumbnail: "/images/spartan_n_minotaur/hero.png", heroImage: "/images/spartan_n_minotaur/hero.png",
@@ -152,11 +154,30 @@ export const projects: Project[] = ([
     model: { src: "/models/spartan_n_minotaur/scene.glb", wireframeSrc: "/models/spartan_n_minotaur/scene.glb", poster: "/images/spartan_n_minotaur/hero.png", alt: "Spartan & Minotaur 3D scene" }
 
   },
-  {
-    title: "Unreal Engine Character Implementation", slug: "unreal-character", category: ["Character", "Unreal Engine"], year: "2026", shortDescription: "Bringing a Blender character asset into a real-time Unreal scene.", 
-    description: "A placeholder implementation study that documents the handoff from an authored Blender character to a usable Unreal Engine asset.", thumbnail: asset("unreal-character", "hero"), heroImage: asset("unreal-character", "hero"), gallery: ["viewport", "material", "setup"].map((name, i) => ({ src: asset("unreal-character", name), alt: `Unreal character ${name} placeholder`, aspect: (["wide", "square", "wide"] as const)[i] })), software: ["Blender", "Unreal Engine"], skills: ["Export", "Materials", "Engine Integration"], pipeline: [{ title: "Prepare", note: "Check scale, axes and asset naming." }, { title: "Export", note: "Package skeletal mesh and textures." }, { title: "Implement", note: "Set up materials in Unreal." }, { title: "Validate", note: "Inspect presentation and motion in engine." }], engine: "Unreal Engine", role: "3D Artist / Technical Artist", featured: true, order: 6, tags: ["unreal", "character", "implementation"]
+  {    title: "Yokai Coffee - Mobile Game", featured: true, order: 7, slug: "yokai-coffee-mobile-game", category: ["Character", "Unity"], year: "2026", 
+    shortDescription: "A cozy coffee brewing mobile game inspired with the Night Parade of One Hundred Demons.", 
+    description: "A coffee brewing mobile game where the player are the store manager and they need to fullfill the demons desire, which they can leave the store to find a better and quicker one, Because they are rushing to the Night Parade of One Hundred Demons, but thay are just too sleepy. You need to wake them up for them to get to work!", 
+    thumbnail: "/images/yokai_coffee/game_cover.png", heroImage: "/images/yokai_coffee/game_cover.png",
+    logo: "/images/yokai_coffee/logo.png",
+    gallery: [
+      { src: "/images/yokai_coffee/game_cover_w_buttons.png", alt: "Yokai Coffee game cover", aspect: "wide" },
+      { src: "/images/yokai_coffee/1.png", alt: "Yokai Coffee gameplay", aspect: "wide" },
+      { src: "/images/yokai_coffee/2.png", alt: "Yokai Coffee inventory", aspect: "wide" },
+      { src: "/images/yokai_coffee/3.png", alt: "Yokai Coffee serving", aspect: "wide" },
+      { src: "/images/yokai_coffee/4.png", alt: "Yokai Coffee fill temper", aspect: "wide" },
+      { src: "/images/yokai_coffee/5.png", alt: "Yokai Coffee espresso machine", aspect: "wide" },
+      { src: "/images/yokai_coffee/6.png", alt: "Yokai Coffee brewing", aspect: "wide" }],
+    software: ["Procreate", "Unity"], 
+    skills: ["Game Development", "C# Scripting", "Game Design"], 
+    pipeline: [
+      { title: "Concept and Design", note: "A strong japanese vibe combine with mobile chilling game, the result is a coffee brewing game." },
+      { title: "Implement", note: "Simplify coffee brewing and store management to a easy task as drag & drop to desire area." }, 
+      { title: "Test & Build", note: "Tuning game loop balance and test with target devices." }], 
+    engine: "Unity", 
+    role: "Game Developer / Co-Game Designer", tags: ["unity", "developer", "implementation"],
+    video: "/videos/yokai_coffee/presentation.mp4"
   },
-  {    title: "Robot Fighting CGI ", featured: true, order: 6, slug: "robot_fighting_cgi", category: ["CGI", "Character", "Animation", "VFX"], year: "2024",
+  {    title: "Robot Fighting CGI ", featured: true, order: 8, slug: "robot_fighting_cgi", category: ["CGI", "Character", "Animation", "VFX"], year: "2024",
     shortDescription: "A robots CGI short-animation blended in to real life footage.",
     description: "A short animation of 2 robots fighting, blend in to real life footage. This intended to present capability of CGI and compositing. Showcasing of camera tracking and lighting angle matching.",
     thumbnail: "/images/robot_fighting/hero.png", heroImage: "/images/robot_fighting/hero.png",
@@ -172,7 +193,7 @@ export const projects: Project[] = ([
       { title: "Engine", note: "Set up the Animation Blueprint from locomotion to special actions." }],
     role: "3D Artist / 3D Animator / Compositor",      
     tags: ["character", "robot", "blender", "cgi"], 
-    technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "UV unwrapping", "Stylized materials", "Custom editable texture", "Simple Animation", "Unity animation set-up"] },
+    technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "UV unwrapping", "Stylized materials", "Custom editable texture", "Simple Animation", "Unity animation set-up"]},
     video: "/videos/robot_fighting/final.mp4"
   }
 ] as Project[]).sort((a, b) => a.order - b.order);
