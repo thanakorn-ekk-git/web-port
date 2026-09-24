@@ -3,7 +3,7 @@ import type { Project } from "@/types/project";
 const asset = (project: string, name: string) => `placeholder:${project}-${name}`;
 
 export const projects: Project[] = ([
-  {    title: "Magic Book ", slug: "magic_book", featured: true, order: 1, category: ["Prop", "Texturing", "Animation", "Optimization", "Low-Poly", "Unity"], year: "2026",
+  {    title: "Magic Book ", slug: "magic_book", featured: true, order: 1, category: ["Prop", "Texturing", "Animation", "Low-Poly", "Unity"], year: "2026",
     shortDescription: "A game-ready book asset with editable page content.",
     description: "A prop game asset (have been approved to be in this portfolio showcase). Focusing on low-poly modeling to optimized game's performance, workflow from Blender to Unity is organized and have edit-able texture with fixed UV layout, so clients/developer can create new custom texture without get in to Blender again.",
     thumbnail: "/images/magic_book/hero.jpg", heroImage: "/images/magic_book/hero.jpg",
@@ -21,8 +21,8 @@ export const projects: Project[] = ([
     technical: { "Asset status": "Finished", "Workflow": ["Low-poly modeling", "UV unwrapping", "Stylized materials", "Custom editable texture", "Simple Animation", "Unity animation set up"] },
   },
   {    title: "Swordbound: Burden of the Chosen Game Prototype", featured: true, order: 2, slug: "swordbound-burden_of_the_chosen", 
-    category: ["Character", "Gameplay", "AI", "VFX", "Unreal Engine", "Optimization", "Swordbound"], year: "2025-2026",
-    shortDescription: "A action-fantasy game prototype: hand-authored Blender assets driven entirely by Blueprint-only Unreal Engine systems.",
+    category: ["Character", "Gameplay", "VFX", "Unreal Engine", "Swordbound"], year: "2025-2026",
+    shortDescription: "An action-fantasy game prototype: hand-authored Blender assets driven entirely by Blueprint-only Unreal Engine systems.",
     description: "A solo action-fantasy built to demonstrate a full pipeline from Blender art to a playable Unreal build without writing any C++. The focus is combat feel and systemic depth: a combo-driven melee and casting skills loop, reactive enemy AI, and readable stylized VFX feedback, all authored through Blueprint and Unreal's built-in editor systems.",
     thumbnail: "/images/swordbound_dev/hero-2.png", heroImage: "/images/swordbound_dev/hero-2.png",
     logo: "/images/swordbound_dev/logo.png",
@@ -48,7 +48,7 @@ export const projects: Project[] = ([
     engine: "Unreal Engine (Blueprint only)", 
     skills: ["Blueprint Scripting", "Gameplay Systems Design", "AI Behavior Trees", "Niagara VFX", "Animation Blueprints", "Level Design", "Procedural Content Generation"],
     pipeline: [
-      { title: "Concept & design", note: "A story of the one who gets power of the ancient sword which posess 4 nature elements along side by define the core combat loop, enemy archetypes, and the fantasy the moment-to-moment gameplay should deliver." },
+      { title: "Concept & design", note: "A story of the one who gets power of the ancient sword which possess 4 nature elements along side by define the core combat loop, enemy archetypes, and the fantasy the moment-to-moment gameplay should deliver." },
       { title: "Blender production", note: "Model, sculpt, retopologize, texturing, rig and create animations the player character, enemies, weapon and key props." },
       { title: "Combat & ability systems", note: "Build a combo-based melee and casting skills framework in Blueprint using Gameplay Tags, Animation Notifies and cooldown-driven abilities." },
       { title: "Enemy AI", note: "Drive enemy decision-making with Behavior Trees and Blackboards, using EQS for cover, and AI Perception for sight-based detection." },
@@ -59,14 +59,14 @@ export const projects: Project[] = ([
     technical: { "Game status": "Not Released",
       "Combat system": "Combo-based melee combat driven by Gameplay Tags and Animation Notifies",
       "Ability framework": "Blueprint-only ability system handling cooldowns, resource costs and cast interruption",
-      "Enemy AI": ["Base enemy which contains neccessory datas and scale-able to be specific type", "Behavior Trees + Blackboards for enemy decision-making", "Environment Query System (EQS) for cover", "AI Perception for sight-based detection"],
+      "Enemy AI": ["Base enemy which contains necessary datas and scale-able to be specific type", "Behavior Trees + Blackboards for enemy decision-making", "Environment Query System (EQS) for cover", "AI Perception for sight-based detection"],
       "Input": "Enhanced Input System with contextual input mapping for combat and exploration",
       "Animation": "Animation Blueprints with montages and Blend Spaces for locomotion",
-      "VFX": "Niagara particle systems for casing skills, hit reactions, special powers and environmental ambience",
+      "VFX": "Niagara particle systems for casting skills, hit reactions, special powers and environmental ambience",
       "UI": "UMG-driven HUD, ability cooldown indicators and fit-in menus",
       "World Design": "Procedural Content Generation(PCG) make large map design easier and faster. Vegetions, structure and props are place within desire area. While PCG keeping things organized, World Partition decreased asset overload to improve efficiency",
       "Rendering": "Lumen global illumination, defined post-processing and Nanite for high-detail, large amount of environment meshes.",
-      "Persistence": "Blueprint SaveGame system for checkpoints and player progress **currenty not work as expected**"
+      "Persistence": "Blueprint SaveGame system for checkpoints and player progress"
     },
     video: "/videos/swordbound_dev/trailer.mp4",
   },
@@ -158,6 +158,7 @@ export const projects: Project[] = ([
     shortDescription: "A cozy coffee brewing mobile game inspired with the Night Parade of One Hundred Demons.", 
     description: "A coffee brewing mobile game where the player are the store manager and they need to fullfill the demons desire, which they can leave the store to find a better and quicker one, Because they are rushing to the Night Parade of One Hundred Demons, but thay are just too sleepy. You need to wake them up for them to get to work!", 
     thumbnail: "/images/yokai_coffee/game_cover.png", heroImage: "/images/yokai_coffee/game_cover.png",
+    thumbnailFit: "contain",
     logo: "/images/yokai_coffee/logo.png",
     gallery: [
       { src: "/images/yokai_coffee/game_cover_w_buttons.png", alt: "Yokai Coffee game cover", aspect: "wide" },
@@ -177,7 +178,7 @@ export const projects: Project[] = ([
     role: "Game Developer / Co-Game Designer", tags: ["unity", "developer", "implementation"],
     video: "/videos/yokai_coffee/presentation.mp4"
   },
-  {    title: "Robot Fighting CGI ", featured: true, order: 8, slug: "robot_fighting_cgi", category: ["CGI", "Character", "Animation", "VFX"], year: "2024",
+  {    title: "Robot Fighting CGI ", featured: true, order: 8, slug: "robot_fighting_cgi", category: ["CGI", "Robot", "Animation", "VFX"], year: "2024",
     shortDescription: "A robots CGI short-animation blended in to real life footage.",
     description: "A short animation of 2 robots fighting, blend in to real life footage. This intended to present capability of CGI and compositing. Showcasing of camera tracking and lighting angle matching.",
     thumbnail: "/images/robot_fighting/hero.png", heroImage: "/images/robot_fighting/hero.png",
@@ -195,6 +196,23 @@ export const projects: Project[] = ([
     tags: ["character", "robot", "blender", "cgi"], 
     technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "UV unwrapping", "Stylized materials", "Custom editable texture", "Simple Animation", "Unity animation set-up"]},
     video: "/videos/robot_fighting/final.mp4"
+  },
+  {    title: "Holocard - AR Application ", featured: true, order: 9, slug: "holocard_ar_app", category: ["Robot", "VFX", "Unity"], year: "2024",
+    shortDescription: "A mobile AR applicaion, scanning card to show hologram of robots.",
+    description: "A marker-based AR mobile application, tracking triggered by a physical object. With the mechanic of combining individual parts to build a whole object, while the code checking if the correct pieces are simultaneously present on the screen, then seamlessly swapping separate part models for a unified full-body model.",
+    thumbnail: "/images/holocard/hero.png", heroImage: "/images/holocard/hero.png",
+    gallery: [{ src: "/images/holocard/hero.png", alt: "Holocard app sample", aspect: "wide" }],
+    software: ["Blender", "Unity"], 
+    skills: ["Modeling", "Hard-Surface", "Geometry Node", "C# Scripting"],
+    pipeline: [
+      { title: "Modeling", note: "Model hard surface and low poly robot. I then apply create geometry node of convert mesh to hologram-like." }, 
+      { title: "Game Integration", note: "Create simple glow and transparent shader that working in Unity, apply to the 3D assets." }, 
+      { title: "Vuforia", note: "Prepare tracking target." },
+      { title: "Implemantation", note: "Config Vuforia and store tracking data, which determine what to display." }],
+    role: "3D Artist / Developer",      
+    tags: ["character", "robot", "blender", "cgi", "geometry_node"], 
+    technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "Geometry Node", "Vuforia", "Unity"]},
+    video: "/videos/holocard/holocard.mp4"
   }
 ] as Project[]).sort((a, b) => a.order - b.order);
 export const getProject = (slug: string) => projects.find((project) => project.slug === slug);

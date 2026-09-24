@@ -1,5 +1,6 @@
 # Thanakorn Ekakool — 3D Artist Portfolio #
 
-cmdgit add .
-git commit -m "updated the text and colors"
+cmd
+git add .
+git commit -m "  "
 git push origin main
