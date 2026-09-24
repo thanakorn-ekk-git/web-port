@@ -21,7 +21,7 @@ export const projects: Project[] = ([
     technical: { "Asset status": "Finished", "Workflow": ["Low-poly modeling", "UV unwrapping", "Stylized materials", "Custom editable texture", "Simple Animation", "Unity animation set up"] },
   },
   {    title: "Swordbound: Burden of the Chosen Game Prototype", featured: true, order: 2, slug: "swordbound-burden_of_the_chosen", 
-    category: ["Character", "Gameplay", "VFX", "Unreal Engine", "Swordbound"], year: "2025-2026",
+    category: ["Character", "Game Development", "VFX", "Unreal Engine", "Swordbound"], year: "2025-2026",
     shortDescription: "An action-fantasy game prototype: hand-authored Blender assets driven entirely by Blueprint-only Unreal Engine systems.",
     description: "A solo action-fantasy built to demonstrate a full pipeline from Blender art to a playable Unreal build without writing any C++. The focus is combat feel and systemic depth: a combo-driven melee and casting skills loop, reactive enemy AI, and readable stylized VFX feedback, all authored through Blueprint and Unreal's built-in editor systems.",
     thumbnail: "/images/swordbound_dev/hero-2.png", heroImage: "/images/swordbound_dev/hero-2.png",
@@ -70,19 +70,26 @@ export const projects: Project[] = ([
     },
     video: "/videos/swordbound_dev/trailer.mp4",
   },
-  {    title: "Hector - Swordbound Character Game Asset ", featured: true, order: 3, slug: "hector-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
-    shortDescription: "A game-ready character built from sculpt to animation-ready rig.",
+  {    title: "Hector - Swordbound Character", featured: true, order: 3, slug: "hector-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
+    shortDescription: "A heroic male character, the protagonist of Swordbound. Built from sculpt to animation-ready rig.",
     description: "A stylized male character. The intended focus is a clear, production-minded journey from Blender sculpting through efficient topology, materials, rigging, animations, and engine delivery.",
     thumbnail: "/images/hector/hero.png", heroImage: "/images/hector/hero.png",
     logo: "/images/swordbound_dev/logo.png",
     gallery: [
       { src: "/images/hector/hero.png", alt: "Hector hero render", aspect: "wide" },
       { src: "/images/hector/wireframe.png", alt: "Hector wireframe", aspect: "square" },
-      { src: "/images/hector/diffuse.png", alt: "Hector diffuse texture", aspect: "square" }
+      { src: "/images/hector/diffuse.png", alt: "Hector diffuse texture", aspect: "square" },
+      { src: "/images/hector/breakdown.png", alt: "Breakdown", aspect: "wide" }
     ],
     software: ["Blender", "Procreate", "Unreal Engine"], 
     skills: ["Modeling", "Sculpting", "Retopology", "UVs", "Texturing", "Rigging", "Animation", "Optimization"],
-    pipeline: [{ title: "Blockout", note: "Establish silhouette and playable proportions." }, { title: "Sculpt", note: "Develop stylized planes and readable forms." }, { title: "Retopology", note: "Build clean deformation-ready topology while maintaining low performance cost." }, { title: "Texture", note: "Texture baking from high poly." }, { title: "Rig & animate", note: "Prepare and create animations of the character for game motion." }, { title: "Engine", note: "Set up the Animation Blueprint from locomotion to special actions." }],
+    pipeline: [
+      { title: "Blockout", note: "Establish silhouette of stylized heroic anatomy, body porpotions and animations." }, 
+      { title: "Sculpt", note: "Develop stylized male anatomy, aesthetic build." }, 
+      { title: "Retopology", note: "Build clean deformation-ready topology while maintaining low performance cost." }, 
+      { title: "Texture", note: "Texture baking from high poly." }, 
+      { title: "Rig & animate", note: "Prepare and create animations of the character for game motion." }, 
+      { title: "Engine", note: "Set up the Animation Blueprint from locomotion to special actions." }],
     engine: "Unreal Engine", 
     role: "3D Character Artist / 3D Animator / Rigger / Character Technical Artist",     
     tags: ["character", "game-ready", "blender"], 
@@ -90,8 +97,8 @@ export const projects: Project[] = ([
     video: "/videos/hector/walk_run.mp4",
     model: { src: "/models/hector/shaded.glb", wireframeSrc: "/models/hector/wired.glb", poster: "/images/hector/hero.png", alt: "Hector 3D model" }
   },
-  {    title: "Egertun, the Skullbourne - Swordbound Character Game Asset ", featured: true, order: 4, slug: "egertun-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
-    shortDescription: "A game-ready character built from sculpt to animation-ready rig.",
+  {    title: "Egertun, the Skullbourne - Swordbound Character", featured: true, order: 4, slug: "egertun-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
+    shortDescription: "An evil boss character, the one possess with darkness fragement. Built from sculpt to animation-ready rig.",
     description: "A stylized evil boss character. The intended focus is a clear, production-minded journey from Blender sculpting through efficient topology, materials, rigging, animations, and engine delivery.",
     thumbnail: "/images/egertun/hero.png", heroImage: "/images/egertun/hero.png",
     logo: "/images/swordbound_dev/logo.png",
@@ -103,7 +110,13 @@ export const projects: Project[] = ([
     ],
     software: ["Blender", "Procreate", "Unreal Engine"], 
     skills: ["Modeling", "Sculpting", "Retopology", "UVs", "Texturing", "Rigging", "Animation", "Optimization"],
-    pipeline: [{ title: "Blockout", note: "Establish silhouette and playable proportions." }, { title: "Sculpt", note: "Develop stylized planes and readable forms." }, { title: "Retopology", note: "Build clean deformation-ready topology while maintaining low performance cost." }, { title: "Texture", note: "Texture baking from high poly." }, { title: "Rig & animate", note: "Prepare and create animations of the character for game motion." }, { title: "Engine", note: "Set up the Animation Blueprint from locomotion to special actions." }],
+    pipeline: [
+      { title: "Blockout", note: "Create clear silhouette, visualize how hard it would be, of facing him." }, 
+      { title: "Sculpt & Modeling", note: "Build an over-propotions build, to describe an anomaly of his absense. Plus with hard-surface armor, giving more variety to character." }, 
+      { title: "Retopology", note: "Build clean deformation-ready topology while maintaining low performance cost." }, 
+      { title: "Texture", note: "Texture baking from high poly. With additional of material differentiation." }, 
+      { title: "Rig & animate", note: "Prepare and create animations of the character for game motion." }, 
+      { title: "Engine", note: "Set up the Animation Blueprint from locomotion to special actions." }],
     engine: "Unreal Engine", 
     role: "3D Character Artist / 3D Animator / Rigger / Character Technical Artist",      
     tags: ["character", "game-ready", "blender"], 
@@ -154,11 +167,11 @@ export const projects: Project[] = ([
     model: { src: "/models/spartan_n_minotaur/scene.glb", wireframeSrc: "/models/spartan_n_minotaur/scene.glb", poster: "/images/spartan_n_minotaur/hero.png", alt: "Spartan & Minotaur 3D scene" }
 
   },
-  {    title: "Yokai Coffee - Mobile Game", featured: true, order: 7, slug: "yokai-coffee-mobile-game", category: ["Character", "Unity"], year: "2026", 
+  {    title: "Yokai Coffee - Mobile Game", featured: true, order: 7, slug: "yokai-coffee-mobile-game", category: ["Character", "Unity", "Game Development"], year: "2026", 
     shortDescription: "A cozy coffee brewing mobile game inspired with the Night Parade of One Hundred Demons.", 
     description: "A coffee brewing mobile game where the player are the store manager and they need to fullfill the demons desire, which they can leave the store to find a better and quicker one, Because they are rushing to the Night Parade of One Hundred Demons, but thay are just too sleepy. You need to wake them up for them to get to work!", 
     thumbnail: "/images/yokai_coffee/game_cover.png", heroImage: "/images/yokai_coffee/game_cover.png",
-    thumbnailFit: "contain",
+    thumbnailFit: "cover",
     logo: "/images/yokai_coffee/logo.png",
     gallery: [
       { src: "/images/yokai_coffee/game_cover_w_buttons.png", alt: "Yokai Coffee game cover", aspect: "wide" },
@@ -176,7 +189,7 @@ export const projects: Project[] = ([
       { title: "Test & Build", note: "Tuning game loop balance and test with target devices." }], 
     engine: "Unity", 
     role: "Game Developer / Co-Game Designer", tags: ["unity", "developer", "implementation"],
-    video: "/videos/yokai_coffee/presentation.mp4"
+    video: "/videos/interayokai_coffeective_zoo/presentation.mp4"
   },
   {    title: "Robot Fighting CGI ", featured: true, order: 8, slug: "robot_fighting_cgi", category: ["CGI", "Robot", "Animation", "VFX"], year: "2024",
     shortDescription: "A robots CGI short-animation blended in to real life footage.",
@@ -213,6 +226,32 @@ export const projects: Project[] = ([
     tags: ["character", "robot", "blender", "cgi", "geometry_node"], 
     technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "Geometry Node", "Vuforia", "Unity"]},
     video: "/videos/holocard/holocard.mp4"
+  },
+  {    title: "Interactive Zoo - Virtual Exhibition ", featured: true, order: 10, slug: "interactive_zoo", category: ["Robot", "VFX", "Unity"], year: "2025",
+    shortDescription: "A vitual exhibition, display and interact with animals in thier home environment.",
+    description: "A virtual exhibition of interactive zoo, Containing animals which staying in their home environment. The animals and environments are low poly 3D model, look more friendly, more interactable and fitting concept of virtual exhibition.",
+    thumbnail: "/images/interactive_zoo/toucan.png", heroImage: "/images/interactive_zoo/toucan.png",
+    gallery: [
+      { src: "/images/interactive_zoo/toucan.png", alt: "Toucan", aspect: "wide" },
+      { src: "/images/interactive_zoo/jaguar.png", alt: "Jaguar", aspect: "wide" },
+      { src: "/images/interactive_zoo/anaconda.png", alt: "Anaconda", aspect: "wide" },
+      { src: "/images/interactive_zoo/savanna.png", alt: "Savanna", aspect: "wide" },
+      { src: "/images/interactive_zoo/lion.png", alt: "Lion", aspect: "wide" },
+      { src: "/images/interactive_zoo/giraffe.png", alt: "Giraffe", aspect: "wide" },
+      { src: "/images/interactive_zoo/owl.png", alt: "Owl", aspect: "wide" },
+      { src: "/images/interactive_zoo/tundra.png", alt: "Tundra", aspect: "wide" },
+      { src: "/images/interactive_zoo/antarctica.png", alt: "Antarctica", aspect: "wide" }],
+    software: ["Blender", "Unity"], 
+    skills: ["Modeling", "Hard-Surface", "Geometry Node", "C# Scripting"],
+    pipeline: [
+      { title: "Modeling", note: "Model hard surface and low poly robot. I then apply create geometry node of convert mesh to hologram-like." }, 
+      { title: "Game Integration", note: "Create simple glow and transparent shader that working in Unity, apply to the 3D assets." }, 
+      { title: "Vuforia", note: "Prepare tracking target." },
+      { title: "Implemantation", note: "Config Vuforia and store tracking data, which determine what to display." }],
+    role: "3D Artist / Developer",      
+    tags: ["character", "robot", "blender", "cgi", "geometry_node"], 
+    technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "Geometry Node", "Vuforia", "Unity"]},
+    video: "/videos/interactive_zoo/presentation.mp4"
   }
 ] as Project[]).sort((a, b) => a.order - b.order);
 export const getProject = (slug: string) => projects.find((project) => project.slug === slug);
