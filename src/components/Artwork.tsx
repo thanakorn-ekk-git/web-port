@@ -1,10 +1,10 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export function Artwork({ src, alt, className = "", label, fit, style }: { src: string; alt: string; className?: string; label?: string; fit?: "cover" | "contain" | "fill"; style?: React.CSSProperties }) {
   const isPlaceholder = src.startsWith("placeholder:");
   const palette = src.includes("sword") ? "gold" : src.includes("combat") ? "red" : src.includes("unreal") ? "violet" : src.includes("unity") ? "cyan" : "lime";
-  if (!isPlaceholder) return <img className={`artwork ${className}`} src={src} alt={alt} loading="lazy" draggable={false} style={{ ...(fit ? { objectFit: fit } : undefined), ...style }} />;
+  if (!isPlaceholder) return <img className={`artwork ${className}`} src={src} alt={alt} loading="lazy" style={{ ...(fit ? { objectFit: fit } : undefined), ...style }} />;
   return <div className={`artwork art-${palette} ${className}`} role="img" aria-label={alt}><i /><b /><em /><span>{label ?? alt.replace(" placeholder", "")}</span></div>;
 }
 
@@ -17,36 +17,21 @@ export function Gallery({ items }: { items: { src: string; alt: string; caption?
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
   const dragRef = useRef<{ startX: number; startY: number; panX: number; panY: number } | null>(null);
-  const frameRef = useRef<HTMLDivElement | null>(null);
-  const scaleRef = useRef(scale);
-  scaleRef.current = scale;
 
   const reset = () => { setScale(1); setPan({ x: 0, y: 0 }); };
   const show = (index: number) => { setActive(index); reset(); };
   const move = (step: number) => { setActive((current) => current === null ? null : (current + step + items.length) % items.length); reset(); };
 
-  // Wheel zoom needs a real (non-passive) DOM listener — React's onWheel is
-  // registered passive under the hood, so e.preventDefault() there silently
-  // does nothing and the page scrolls underneath the lightbox regardless.
-  useEffect(() => {
-    const el = frameRef.current;
-    if (!el) return;
-    const handler = (e: WheelEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
-      setScale((s) => {
-        const next = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, s - e.deltaY * 0.0018));
-        if (next <= MIN_ZOOM) setPan({ x: 0, y: 0 });
-        return next;
-      });
-    };
-    el.addEventListener("wheel", handler, { passive: false });
-    return () => el.removeEventListener("wheel", handler);
-  }, [active]);
-
+  const onWheel = (e: React.WheelEvent) => {
+    e.preventDefault();
+    setScale((s) => {
+      const next = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, s - e.deltaY * 0.0018));
+      if (next <= MIN_ZOOM) setPan({ x: 0, y: 0 });
+      return next;
+    });
+  };
   const onMouseDown = (e: React.MouseEvent) => {
     if (scale <= MIN_ZOOM) return;
-    e.preventDefault();
     dragRef.current = { startX: e.clientX, startY: e.clientY, panX: pan.x, panY: pan.y };
     setDragging(true);
   };
@@ -61,8 +46,8 @@ export function Gallery({ items }: { items: { src: string; alt: string; caption?
     {active !== null && <div className="lightbox" role="dialog" aria-modal="true" aria-label={items[active].alt} onKeyDown={(e) => { if (e.key === "Escape") setActive(null); if (e.key === "ArrowRight") move(1); if (e.key === "ArrowLeft") move(-1); }} tabIndex={-1}>
       <button className="lightbox-close" onClick={() => setActive(null)} aria-label="Close gallery">×</button><button className="lightbox-nav previous" onClick={() => move(-1)} aria-label="Previous image">←</button>
       <div
-        ref={frameRef}
         className={`lightbox-frame ${scale > MIN_ZOOM ? "zoomed" : ""}`}
+        onWheel={onWheel}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
         onMouseUp={endDrag}

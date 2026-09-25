@@ -7,6 +7,7 @@ export const projects: Project[] = ([
     shortDescription: "A game-ready book asset with editable page content.",
     description: "A prop game asset (have been approved to be in this portfolio showcase). Focusing on low-poly modeling to optimized game's performance, workflow from Blender to Unity is organized and have edit-able texture with fixed UV layout, so clients/developer can create new custom texture without get in to Blender again.",
     thumbnail: "/images/magic_book/hero.jpg", heroImage: "/images/magic_book/hero.jpg",
+    thumbnailFit: "cover",
     gallery: [
       { src: "/images/magic_book/hero.jpg", alt: "Magic Book hero render", aspect: "wide" },
       { src: "/images/magic_book/custom_page.png", alt: "Magic Book custom page", aspect: "wide"}
@@ -17,7 +18,7 @@ export const projects: Project[] = ([
     engine: "Unity", 
     role: "3D Artist / Technical Artist",  
     tags: ["prop", "game-ready", "blender", "unity"], 
-    video: "/videos/magic_book/open.mp4",
+    video: "https://youtu.be/FcfC6TnLhVE",
     technical: { "Asset status": "Finished", "Workflow": ["Low-poly modeling", "UV unwrapping", "Stylized materials", "Custom editable texture", "Simple Animation", "Unity animation set up"] },
   },
   {    title: "Swordbound: Burden of the Chosen Game Prototype", featured: true, order: 2, slug: "swordbound-burden_of_the_chosen", 
@@ -68,7 +69,7 @@ export const projects: Project[] = ([
       "Rendering": "Lumen global illumination, defined post-processing and Nanite for high-detail, large amount of environment meshes.",
       "Persistence": "Blueprint SaveGame system for checkpoints and player progress"
     },
-    video: "/videos/swordbound_dev/trailer.mp4",
+    video: "https://youtu.be/jhQZo3Yxb8c",
   },
   {    title: "Hector - Swordbound Character", featured: true, order: 3, slug: "hector-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
     shortDescription: "A heroic male character, the protagonist of Swordbound. Built from sculpt to animation-ready rig.",
@@ -94,7 +95,7 @@ export const projects: Project[] = ([
     role: "3D Character Artist / 3D Animator / Rigger / Character Technical Artist",     
     tags: ["character", "game-ready", "blender"], 
     technical: { "Asset status": "Finished", "Workflow": ["High poly to low poly", "UV unwrapping", "Normal texture from high poly", "Unreal Engine integration"] },
-    video: "/videos/hector/walk_run.mp4",
+    video: "https://youtu.be/gh9fyASI5h0",
     model: { src: "/models/hector/shaded.glb", wireframeSrc: "/models/hector/wired.glb", poster: "/images/hector/hero.png", alt: "Hector 3D model" }
   },
   {    title: "Egertun, the Skullbourne - Swordbound Character", featured: true, order: 4, slug: "egertun-swordbound-character", category: ["Swordbound", "Character", "Rigging", "Animation", "Sculpting", "Unreal Engine"], year: "2025-2026",
@@ -163,9 +164,7 @@ export const projects: Project[] = ([
       { title: "Animation", note: "Give character motion of weight and timing. And set lighting scenery according to storyboard and present character perception." }, 
       { title: "Post-Processing and Export", note: "Render and make a presentation of breaking down workflow." }], 
     role: "3D Artist / Animator", tags: ["character", "animation", "rigging", "prop", "blender"],
-    video: "/videos/spartan_n_minotaur/final.mp4",
-    model: { src: "/models/spartan_n_minotaur/scene.glb", wireframeSrc: "/models/spartan_n_minotaur/scene.glb", poster: "/images/spartan_n_minotaur/hero.png", alt: "Spartan & Minotaur 3D scene" }
-
+    video: "https://youtu.be/MOIRB93z8wY"
   },
   {    title: "Yokai Coffee - Mobile Game", featured: true, order: 7, slug: "yokai-coffee-mobile-game", category: ["Character", "Unity", "Game Development"], year: "2026", 
     shortDescription: "A cozy coffee brewing mobile game inspired with the Night Parade of One Hundred Demons.", 
@@ -189,7 +188,7 @@ export const projects: Project[] = ([
       { title: "Test & Build", note: "Tuning game loop balance and test with target devices." }], 
     engine: "Unity", 
     role: "Game Developer / Co-Game Designer", tags: ["unity", "developer", "implementation"],
-    video: "/videos/interayokai_coffeective_zoo/presentation.mp4"
+    video: "https://youtu.be/T5JJ3IqE8Zk"
   },
   {    title: "Robot Fighting CGI ", featured: true, order: 8, slug: "robot_fighting_cgi", category: ["CGI", "Robot", "Animation", "VFX"], year: "2024",
     shortDescription: "A robots CGI short-animation blended in to real life footage.",
@@ -208,7 +207,7 @@ export const projects: Project[] = ([
     role: "3D Artist / 3D Animator / Compositor",      
     tags: ["character", "robot", "blender", "cgi"], 
     technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "UV unwrapping", "Stylized materials", "Custom editable texture", "Simple Animation", "Unity animation set-up"]},
-    video: "/videos/robot_fighting/final.mp4"
+    video: "https://youtu.be/advghWlG8Xs"
   },
   {    title: "Holocard - AR Application ", featured: true, order: 9, slug: "holocard_ar_app", category: ["Robot", "VFX", "Unity"], year: "2024",
     shortDescription: "A mobile AR applicaion, scanning card to show hologram of robots.",
@@ -225,7 +224,7 @@ export const projects: Project[] = ([
     role: "3D Artist / Developer",      
     tags: ["character", "robot", "blender", "cgi", "geometry_node"], 
     technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "Geometry Node", "Vuforia", "Unity"]},
-    video: "/videos/holocard/holocard.mp4"
+    video: "https://youtu.be/lFa3l7882IE"
   },
   {    title: "Interactive Zoo - Virtual Exhibition ", featured: true, order: 10, slug: "interactive_zoo", category: ["Robot", "VFX", "Unity"], year: "2025",
     shortDescription: "A vitual exhibition, display and interact with animals in thier home environment.",
@@ -251,7 +250,7 @@ export const projects: Project[] = ([
     role: "3D Artist / Developer",      
     tags: ["character", "robot", "blender", "cgi", "geometry_node"], 
     technical: { "Asset status": "Finished", "Workflow": ["Hard surface low poly modeling", "Geometry Node", "Vuforia", "Unity"]},
-    video: "/videos/interactive_zoo/presentation.mp4"
+    video: "https://youtu.be/mwJ4yif5Tlc"
   }
 ] as Project[]).sort((a, b) => a.order - b.order);
 export const getProject = (slug: string) => projects.find((project) => project.slug === slug);
